@@ -11,27 +11,26 @@ public abstract class Employee {
 	private GenderType gender;
 	private LocalDate employmentDate;
 	private int bonusAmount;
-	
+
 	public Employee(String name, int salary, GenderType gender) {
-		employmentDate =  LocalDate.now();
+		employmentDate = LocalDate.now();
 		this.name = name;
 		this.salary = salary;
 		this.gender = gender;
 		bonusAmount = 0;
 	}
-	//returns salaryWithBonus
+
 	public abstract void setBonus(int salary);
 
-	
 	/*******************/
-	/*****GETTERS*******/
-	/*****SETTERS*******/
+	/***** GETTERS *******/
+	/***** SETTERS *******/
 	/*******************/
-	
+
 	public int getBonusAmount() {
 		return bonusAmount;
 	}
-	
+
 	public void setBonusAmount(int bonus) {
 		bonusAmount = bonus;
 	}
@@ -47,7 +46,7 @@ public abstract class Employee {
 	public int getID() {
 		return ID;
 	}
-	
+
 	public void setID(int ID) {
 		this.ID = ID;
 	}
@@ -68,7 +67,4 @@ public abstract class Employee {
 	public String toString() {
 		return "| Name: " + name + " | ID: " + ID + " | Salary: " + salary + " | Bonus: " + bonusAmount;
 	}
-	
-	
-	
 }

@@ -154,7 +154,7 @@ public class EmployeeManagement {
 				System.out.print("Enter salary: ");
 				salary = sc.nextInt();
 				sc.nextLine();
-				System.out.print("Enter gender: ");
+				System.out.print("Enter gender (male/female): ");
 				gender = sc.nextLine();
 
 				if (gender.equalsIgnoreCase("male")) {
@@ -169,6 +169,7 @@ public class EmployeeManagement {
 				break;
 			}
 		} while (exit == false);
+		sc.close();
 		return null;
 
 	}
