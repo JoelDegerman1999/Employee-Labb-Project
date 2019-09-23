@@ -147,6 +147,7 @@ public class EmployeeManagement {
 					exit = true;
 					return new Programmer(name, salary, GenderType.FEMALE);
 				}
+				System.out.println("\nWrong input, start over\n");
 				break;
 			case 2:
 				System.out.print("Enter name: ");
@@ -164,8 +165,7 @@ public class EmployeeManagement {
 					exit = true;
 					return new Salesman(name, salary, GenderType.FEMALE);
 				}
-				break;
-			default:
+				System.out.println("\nWrong input, start over\n");
 				break;
 			}
 		} while (exit == false);
@@ -179,5 +179,5 @@ public class EmployeeManagement {
 			employee.setBonus(employee.getSalary());
 		}
 	}
-	
+
 }
