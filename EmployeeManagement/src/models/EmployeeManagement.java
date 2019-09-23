@@ -153,6 +153,7 @@ public class EmployeeManagement {
 				System.out.print("Enter name: ");
 				name = sc.nextLine();
 				System.out.print("Enter salary: ");
+				
 				salary = sc.nextInt();
 				sc.nextLine();
 				System.out.print("Enter gender (male/female): ");
