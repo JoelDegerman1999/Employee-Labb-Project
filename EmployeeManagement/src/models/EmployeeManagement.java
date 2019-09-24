@@ -116,12 +116,16 @@ public class EmployeeManagement {
 
 	}
 
+	
+	//Metod som kallas i Menu.java för att skapa en ny employee!
+	//Inte nöjd med denna metod, men var vår bästa lösning vi kom på!
 	public static Employee createEmployee() {
 		boolean exit = false;
 		Scanner sc = new Scanner(System.in);
 		String name;
 		int salary;
 		String gender;
+		
 		do {
 			System.out.println("1. Programmer");
 			System.out.println("2. Salesman\n");
@@ -153,7 +157,7 @@ public class EmployeeManagement {
 				System.out.print("Enter name: ");
 				name = sc.nextLine();
 				System.out.print("Enter salary: ");
-				
+
 				salary = sc.nextInt();
 				sc.nextLine();
 				System.out.print("Enter gender (male/female): ");
@@ -172,7 +176,6 @@ public class EmployeeManagement {
 		} while (exit == false);
 		sc.close();
 		return null;
-
 	}
 
 	public void deliverBonuses() {

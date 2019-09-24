@@ -1,11 +1,10 @@
 package ui;
 
-import java.util.Scanner;
+import utilities.Utilities;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 		Menu.loadStartEmployees();
 
 		boolean exit = false;
@@ -13,7 +12,7 @@ public class Main {
 			Menu.printMenu();
 
 			System.out.print("Enter a choice: ");
-			int choice = sc.nextInt();
+			int choice = Utilities.sc.nextInt();
 
 			switch (choice) {
 			case 1:
@@ -28,14 +27,11 @@ public class Main {
 				break;
 			default:
 				System.out.println("Enter a correct number between (0-2)\n (Press enter)");
-				sc.nextLine();// rensa cache
-				sc.nextLine();
+				Utilities.sc.nextLine();// rensa cache
+				Utilities.sc.nextLine();
 				break;
 			}
 		} while (!exit);
-
-		sc.close();
-
+		Utilities.sc.close();
 	}
-
 }
